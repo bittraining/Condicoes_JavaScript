@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <h1>Eu Sou!</h1>
+        <p>Digite o país em que nasceu:</p>
+        <input type="text" name="pais" id="pais">
+        <input type="button" value="Então Sou!" onclick="verificar()">
+        <div id="res"></div>
+
+        <script>
+            
+            
+            function verificar() {
+                var pais = window.document.querySelector('input#pais')
+                var res = window.document.querySelector('div#res')
+                var bra = String(pais.value)
+                if (bra == `brasil`) {
+                    res.innerHTML += `<p>Brasileiro!</p>`
+                } else {
+                    res.innerHTML += `<p>Estrangeiro!</p>`
+                }
+            }
+        </script>
+
+    </body>
+</html>
+
+
+
